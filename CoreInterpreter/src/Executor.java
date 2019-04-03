@@ -1,4 +1,7 @@
+//Author: Shunkai Guo
+//Execution of parsed program
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -20,7 +23,10 @@ public class Executor {
     public static void exeProg(ParseTree p, String program, String fileName)
             throws Exception {
         assert (p.currNTNo() == 1) : "Wrong NTNo";
-        s = new Scanner(new BufferedReader(new FileReader(fileName)));
+        File file = new File(fileName);
+        if (file.exists()) {
+            s = new Scanner(new BufferedReader(new FileReader(fileName)));
+        }
         t = new Tokenizer(program);
         matchKey(TokenKind.LOWER_PROGRAM);
         t.skipToken();//program
@@ -34,7 +40,9 @@ public class Executor {
         p.goUP();
         matchKey(TokenKind.LOWER_END);
         t.skipToken();//end
-        s.close();
+        if (file.exists()) {
+            s.close();
+        }
     }
 
     public static void exeDecl_seq(ParseTree p) throws Exception {
@@ -395,3 +403,4 @@ public class Executor {
         return res;
     }
 }
+

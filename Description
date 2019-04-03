@@ -1,0 +1,5 @@
+This interpreter is used the ParseTree approach to implement it. ParseTree class is used to create the tree object. The Parse class is used to structure the whole core program. The Print class is used to pretty print the program and the Executor class is used to run the program and return the result. 
+To test the program, using <javac ProgramMain.java> to compile the program and using <java ProgramMain coreProgram inputData print> or <java ProgramMain coreProgram inputData doNotPrint> to run the program. The Core program is in the file coreProgram, and the data for that program is in the file inputData. Other file name is also acceptable.
+
+Bug:
+Pass all test cases

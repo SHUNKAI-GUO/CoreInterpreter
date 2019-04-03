@@ -1,3 +1,5 @@
+//Author: Shunkai Guo
+//Parse tree structure Also containing methods to get access to the value of the node
 import java.util.HashMap;
 import java.util.Map;
 

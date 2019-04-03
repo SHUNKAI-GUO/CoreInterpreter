@@ -1,3 +1,5 @@
+//Author: Shunkai Guo
+//Main program
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -16,8 +18,11 @@ public class ProgramMain {
         BufferedReader br;
         StringBuilder sb = new StringBuilder();
         String str;
+        if (args.length != 3) {
+            throw new Exception("Wrong arguments");
+        }
         try {
-            br = new BufferedReader(new FileReader("test1.txt"));
+            br = new BufferedReader(new FileReader(args[0]));
             while ((str = br.readLine()) != null) {
                 sb.append(str);
                 sb.append("\r\n");
@@ -31,8 +36,10 @@ public class ProgramMain {
 
         ParseTree parseTree;
         parseTree = Parser.parse(sb.toString().trim());
-        Parser.print(parseTree, sb.toString().trim());
-        Executor.exeProg(parseTree, sb.toString().trim(), "input.txt");
+        if (args[2].equals("print")) {
+            Parser.print(parseTree, sb.toString().trim());
+        }
+        Executor.exeProg(parseTree, sb.toString().trim(), args[1]);
 
     }
 

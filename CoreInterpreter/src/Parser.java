@@ -1,4 +1,5 @@
-
+//Author:Shunkai Guo
+//Parse the original program to the parse tree structure
 public class Parser {
 
     private static Tokenizer t;

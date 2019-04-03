@@ -1,3 +1,5 @@
+//Author: Shunkai Guo
+//Basic node structure of the parse tree
 import java.util.ArrayList;
 import java.util.List;
 

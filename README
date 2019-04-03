@@ -1,0 +1,33 @@
+Executor.java
+Execution of parsed program
+
+Node.java
+Basic node structure of the parse tree
+
+Parser.java
+Parse the original program to the parse tree structure
+
+ParseTree.java
+The Parse tree structure which also containing methods to get access to the value of the node
+
+Print.java
+Pretty print the origianl program if needed
+
+ProgramMain.java
+Main program
+
+Tokenizer.java
+Tokenizer class including methods getToken() and skipToken()
+
+TokenKind.java
+Provided by Dr.Heym. It contains Token Kinds needed for the Core Interpreter project.
+
+Compile program:
+      javac ProgramMain.java
+
+Run program
+      java ProgramMain coreProgram inputData print
+or
+      java ProgramMain coreProgram inputData doNotPrint
+
+The Core program is in the file coreProgram, and the data for that program is in the file inputData.
